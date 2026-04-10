@@ -11,8 +11,9 @@ def debye_integrand(x: float) -> float:
     Returns:
         Value of the integrand
     """
-    if abs(x) < 1e-12:
-        return 0.0
+    if abs(x) < 1e-10:
+        # Taylor expansion for small x: x^4 * e^x / (e^x - 1)^2 -> x^2
+        return x * x
     ex = math.exp(x)
     return (x**4) * ex / ((ex - 1.0) ** 2)
 
