@@ -100,7 +100,8 @@ Debye 积分 [ o bj ec tO bj ec t ] I ( y ) = ∫ 0 y ​ ( e x − 1 ) 2 x 4 e 
 ## 结果图
 - 结果图（至少 1 张）：
 
-![ring-potential](请替换为你的图片路径)
+<img width="2400" height="900" alt="image" src="https://github.com/user-attachments/assets/092664a7-a7fb-44ee-afe5-14e935313e4b" />
+
 
 - 物理解释：等势线分布体现了怎样的空间对称性？### 空间对称性分析
 1. 轴对称性 ：
