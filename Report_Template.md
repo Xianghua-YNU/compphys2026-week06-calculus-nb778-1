@@ -46,15 +46,25 @@
 
 ## 3. Task B：梯形 vs Simpson + Debye 积分（24分）
 
-- 你实现的两个积分器是否通过偶数分段与边界检查：  
+- 你实现的两个积分器是否通过偶数分段与边界检查：  ### 偶数分段与边界检查
+- 梯形法 (trapezoid_composite) ：
+  
+  - 边界检查： n < 1 时抛出 ValueError
+  - 不需要偶数分段，适用于任意正整数 n
+- Simpson 法 (simpson_composite) ：
+  
+  - 边界检查： n < 2 时抛出 ValueError
+  - 偶数分段检查： n % 2 != 0 时抛出 ValueError
+  - 在 debye_integral 函数中，当选择 Simpson 法时会自动确保 n 为偶数（如果不是则 n += 1）
 - 同一参数下方法比较：
 
 | 方法 | n | 积分值 | 误差估计 | 结论 |
 |---|---:|---:|---:|---|
-| 梯形法 |  |  |  |  |
-| Simpson 法 |  |  |  |  |
+| 梯形法 | 200 | 0.876174 | ~8.56e-06 | 计算速度快，精度适中 |
+| Simpson 法 | 200 | 0.876165 | ~3.17e-07 | 计算精度高，收敛速度快 |
 
-- 对 Debye 积分结果的解释：  
+- 对 Debye 积分结果的解释：  ### 物理意义
+Debye 积分 [ o bj ec tO bj ec t ] I ( y ) = ∫ 0 y ​ ( e x − 1 ) 2 x 4 e x ​ d x 是计算固体热容的关键，其中 [ o bj ec tO bj ec t ] y = θ D ​ / T 。
 
 ---
 
